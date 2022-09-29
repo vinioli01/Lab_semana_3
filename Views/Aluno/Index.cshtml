@@ -1,0 +1,37 @@
+@model IEnumerable<lab.Models.Aluno>
+
+@{
+    ViewData["Title"] = "Alunos";
+}
+
+<div class="jumbotron jumbotron-fluid text-center">
+  <div class="container">
+    <h1 class="display-4">Alunos</h1>
+  </div>
+</div>
+<div class="container">
+    <table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Código</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Idade</th>
+      <th scope="col">Sexo</th>
+      <th scope="col">Curso</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach (var aluno in Model)
+      {
+        <tr>
+            <td>@aluno.Id</td>
+            <td>@aluno.Nome</td>
+            <td>@aluno.Idade</td>
+            <td>@aluno.Genero</td>
+            <td>@aluno.Curso</td>
+        </tr>
+      }
+   
+  </tbody>
+    </table>
+</div>
